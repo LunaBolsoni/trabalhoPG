@@ -24,10 +24,10 @@ concluida : false
         minhaLista.forEach((i, index )=> {
             novaLi = novaLi + 
             ` 
-            <li class="texto">
-            <img src="Studio_X.jpg" alt="lixo" onclick="deletarItem(${index})">
+            <li class="texto  ${i.concluida && "right"}">
+            <img src="img/Studio_X.jpg" alt="lixo" onclick="deletarItem(${index})">
             <p> ${i.item} </p> 
-            <img src="bad.png" alt="volta vida" onclick="termianrTarefa(${index})">
+            <img src="img/bad.png" alt="volta vida" onclick="termianrTarefa(${index})">
 
 
             </li>
@@ -37,7 +37,9 @@ concluida : false
         pronta.innerHTML = novaLi
     }
 function termianrTarefa(index) {
-    minhaLista[index].concluida=
+    minhaLista[index].concluida = !minhaLista[index].concluida
+    mostrar()
+
 }
 
     function deletarItem(index){
@@ -46,3 +48,10 @@ function termianrTarefa(index) {
         mostrar()
     }
 button.addEventListener('click', valorInput)
+
+document.addEventListener ("Keypress", function(e) {
+    if (e.key === "enter") {
+        const buton = document.querySelector("#send") 
+    buton.click();
+    }
+})
