@@ -1,4 +1,26 @@
 .right {
-    background-color: rgb(44, 218, 44);
     text-decoration: line-through;
+}
+
+img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.act {
+    background-color: rgb(44, 218, 44);
+
+}
+
+.remove {
+    display: flex;
+    flex-direction: row;
+    padding: 0.3rem;
+    gap: 10px;
+    align-content: center;
+}
+
+.false {
+    display: flex;
+    gap: 30px;
 }
